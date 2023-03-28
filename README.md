@@ -3,8 +3,11 @@
 <p align="center">
 <a href="https://cv.l5enio.com/"><img src="https://img.shields.io/badge/portfolio-web-blueviolet?style=flat&link=https://cv.l5enio.com/" alt="Portfolio Badge"></a>
 <a href="https://cv.l5enio.com/"><img src="https://komarev.com/ghpvc/?username=soufian3raki&color=blueviolet" alt="Profile views"></a>
-<a href="https://opensource.org/license/mit/"><img src="https://img.shields.io/badge/license-MIT-blueviolet" alt="Portfolio Badge"></a>
+<a href="https://opensource.org/license/mit/"><img src="https://img.shields.io/badge/license-MIT-blueviolet" alt="Portfolio Badge"></a></a>
+<a href="https://opensource.org/license/mit/"><img src="https://img.shields.io/badge/PHP-8.0.17-blueviolet" alt="Portfolio Badge"></a>
+<a href="https://opensource.org/license/mit/"><img src="https://img.shields.io/badge/MySQL-10.4.24--MariaDB-blueviolet" alt="Portfolio Badge"></a>
 </p>
+https://img.shields.io/badge/PHP-4-lightgrey
 
 Se pide realizar una pequeña aplicación (DailyTrends) que muestre un feed de noticias. Este feed es un agregador de noticias de diferentes periódicos. DailyTrends es un periódico que une las portadas de los periódicos número uno.
 
