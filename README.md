@@ -8,22 +8,22 @@
 
 Se pide realizar una pequeña aplicación (DailyTrends) que muestre un feed de noticias. Este feed es un agregador de noticias de diferentes periódicos. DailyTrends es un periódico que une las portadas de los periódicos número uno.
 
-Cuando un usuario abre DailyTrends, se encuentra con las 6 noticias de portada de El Pais y El Mundo del día en el que lo abre, además se pueden añadir noticias a mano desde la aplicación.
+Cuando un usuario abre DailyTrends, se encuentra con las 6 noticias de portada de **El Pais** y **El Mundo** del día en el que lo abre, además se pueden **añadir noticias** a mano desde la aplicación.
 
 ## Requisitos Previos
 
-- PHP (versión 8.0.17)
-- MySQL (versión 10.4.24-MariaDB)
+- **PHP** (versión 8.0.17)
+- **MySQL** (versión 10.4.24-MariaDB)
 
 ## Instalación
 1. Clona el repositorio en tu equipo
-2. Importa la base de datos incluida en la carpeta "DB"
-3. Abre el archivo "index.php" en tu navegador web
+2. Importa la base de datos incluida en la carpeta `DB`
+3. Abre el archivo `index.php` en tu navegador web
 
 ## Tareas previas
 1. Crear un repositorio de GIT (Bitbucket, GitHub o similar) con acceso público
 2. Antes de empezar las tareas envíanos por e-mail el enlace del repositorio.
-3.Haz los commits que consideres oportunos conforme vayas desarrollando las diferentes tareas (Mínimo un commit por tarea).
+3. Haz los commits que consideres oportunos conforme vayas desarrollando las diferentes tareas (Mínimo un commit por tarea).
 ## Tareas a realizar
 1. Crea un proyecto con una arquitectura de ficheros básica, gasta un framework si lo consideras oportuno.
 2. Crea un modelo Feed que tenga los atributos: title, body, image, source y publisher.
@@ -39,6 +39,7 @@ Cuando un usuario abre DailyTrends, se encuentra con las 6 noticias de portada d
 2. Usa todas las buenas prácticas que conozcas.
 3. Haz los tests que consideres necesarios.
 4. Usa el motor de estilos que más te guste.
+5. En el archivo `phpinfo.php` puede ver la versión que tienes instalada de **MySQL** y **PHP**.
 
 ## Tecnologías Utilizadas
 
@@ -49,5 +50,5 @@ Cuando un usuario abre DailyTrends, se encuentra con las 6 noticias de portada d
 
 ## Licencia
 
-- Tipo de licencia MIT
+- Tipo de licencia **MIT**
 - [Enlace al archivo LICENSE para más información.](https://opensource.org/license/mit/)
