@@ -21,7 +21,7 @@
             <!--  ╔════════════════════════════════════════════════════════════════════════════════════════╗-->
             <!--  ║ /// .                               EL MUNDO                                 . ///     ║ -->
             <!--  ╚════════════════════════════════════════════════════════════════════════════════════════╝ -->
-            <div  id="elmundo">
+            <div  id="elmundo" style="display: none;">
                 <div class="sectionTitle row pt-4">
                     <div class="col-12">
                         <h2 class="newspaperTitle">El Mundo</h2>
@@ -68,7 +68,7 @@
             <!--  ╔════════════════════════════════════════════════════════════════════════════════════════╗-->
             <!--  ║ /// .                                EL PAIS                                 . ///     ║ -->
             <!--  ╚════════════════════════════════════════════════════════════════════════════════════════╝ -->
-            <div id="elpais">
+            <div id="elpais" style="display: none;">
                 <div class="sectionTitle row pt-4">
                     <div class="col-12">
                         <h2 class="newspaperTitle">El País</h2>
@@ -150,7 +150,7 @@
             <!--  ╔════════════════════════════════════════════════════════════════════════════════════════╗-->
             <!--  ║ /// .                           NOTICIAS CUSTOM                              . ///     ║ -->
             <!--  ╚════════════════════════════════════════════════════════════════════════════════════════╝ -->
-            <div id="masnoticias">
+            <div id="masnoticias" style="display: none;">
                 <div class="sectionTitle row pt-4">
                     <div class="col-12">
                         <h2 class="newspaperTitle">Más Noticias</h2>
@@ -197,48 +197,8 @@
         </main>
 
         <?php include("backend/footer.php");?>
-        <script>
-    // Obtener los botones y los divs correspondientes
-    var btnElMundo = document.querySelector('#el-mundo');
-    var divElMundo = document.querySelector('#elmundo');
-    var btnElPais = document.querySelector('#el-pais');
-    var divElPais = document.querySelector('#elpais');
-    var btnMasNoticias = document.querySelector('#mas-noticias');
-    var divMasNoticias = document.querySelector('#masnoticias');
-    
-    // Función para ocultar todos los divs
-    function ocultarDivs() {
-        divElMundo.style.display = 'none';
-        divElPais.style.display = 'none';
-        divMasNoticias.style.display = 'none';
-    }
-    
-    // Funciones para mostrar los divs correspondientes y ocultar los demás
-    function mostrarElMundo() {
-        ocultarDivs();
-        divElMundo.style.display = 'block';
-    }
-    
-    function mostrarElPais() {
-        ocultarDivs();
-        divElPais.style.display = 'block';
-    }
-    
-    function mostrarMasNoticias() {
-        ocultarDivs();
-        divMasNoticias.style.display = 'block';
-    }
-    
-    // Asignar los eventos de clic a los botones correspondientes
-    btnElMundo.addEventListener('click', mostrarElMundo);
-    btnElPais.addEventListener('click', mostrarElPais);
-    btnMasNoticias.addEventListener('click', mostrarMasNoticias);
-    
-    // Ocultar todos los divs al cargar la página
-    ocultarDivs();
-</script>
+
+        <script src="js/main.js"></script>
 
     </body>
-    
-
 </html>
