@@ -10,24 +10,26 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
     <?php
-        include('functions.php');
-        $id = null;
-        if ( !empty($_GET['id'])) {
-            $id = $_REQUEST['id'];
+        include('functions.php'); // incluye archivo functions.php que contiene la conexión a la base de datos
+        
+        $id = null; // inicializa variable $id en nulo
+        
+        if (!empty($_GET['id'])) { // si existe una variable id en la URL
+            $id = $_REQUEST['id']; // asignar valor de id a la variable $id
         }
-
-        if ( null==$id ) {
+        
+        if (!is_numeric($id) || $id <= 0) { // si $id está vacío, redireccionar al usuario a la página principal
             header("Location: ../index.php");
-        } else {
-            $pdo = Database::connect();
-
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT * FROM noticias where id = ?";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($id));
-            $row = $q->fetch(PDO::FETCH_ASSOC);
-
-            Database::disconnect();
+        } else { // si $id no está vacío
+            $pdo = Database::connect(); // conectarse a la base de datos utilizando la clase Database
+        
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // establece el modo de error de captura de excepción
+            $sql = "SELECT * FROM noticias where id = ?"; // SQL query para seleccionar todas las columnas de la tabla noticias donde el id coincida con la variable $id
+            $q = $pdo->prepare($sql); // prepara la consulta
+            $q->execute(array($id)); // ejecuta la consulta con el valor de la variable $id
+            $row = $q->fetch(PDO::FETCH_ASSOC); // obtiene la fila como un array asociativo
+        
+            Database::disconnect(); // desconectarse de la base de datos
         }
     ?>
 

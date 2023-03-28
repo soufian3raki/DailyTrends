@@ -1,0 +1,142 @@
+$azul: #007bff;
+$blanco: white;
+$negro: black;
+$background-negro: black;
+$background-blanco: white;
+$background-lightgray: lightgray;
+$background-verde: #3E9F42;
+$background-rojo: #B83133;
+
+.articleTitle {
+	color: $azul;
+}
+.articleContainer {
+	margin-top: 40px;
+	border-top: solid 1px $negro;
+}
+.articleDetails {
+	border-radius: 5em;
+	border: 1px solid $negro;
+	padding: 6px 10px 6px 10px;
+	width: fit-content;
+	margin: 10px;
+}
+.sectionTitle {
+	margin-top: 40px;
+	text-align: center;
+	h2 {
+		font-weight: 700;
+		font-size: 3em;
+	}
+}
+.DailyTrends {
+	text-align: center;
+}
+.menu {
+	text-align: center;
+	max-width: 50%;
+	margin: 0 auto;
+}
+.menuOption {
+	background-color: $background-negro;
+	color: $blanco;
+	border-radius: 5em;
+	border: 1px solid $negro;
+	padding: 6px 15px 6px 15px;
+	width: fit-content;
+	&:hover {
+		background-color: $background-blanco;
+		color: $negro;
+	}
+}
+.footer {
+	background-color: $background-lightgray;
+}
+.list-group-item {
+	background-color: $background-lightgray;
+	a {
+		color: $negro;
+		text-decoration: underline;
+	}
+}
+.createForm {
+	border: 1px solid;
+	padding: 25px;
+}
+.form-control {
+	margin-top: 10px;
+}
+.btn {
+	border-radius: 2em;
+	padding: 10px 15px;
+}
+button.btn {
+	margin: 10px 10px 0px 10px;
+}
+.btnCrear {
+	background-color: $background-negro;
+	color: $blanco;
+	border-radius: 5em;
+	border: 1px solid $negro;
+	padding: 6px 15px 6px 15px;
+	width: fit-content;
+	&:hover {
+		background-color: $background-blanco;
+		color: $negro;
+	}
+}
+.btnGreenCrear {
+	background-color: $background-verde;
+	color: $blanco;
+	border-radius: 5em;
+	border: 1px solid $negro;
+	padding: 6px 15px 6px 15px;
+	width: fit-content;
+	&:hover {
+		background-color: $background-blanco;
+		color: $negro;
+	}
+}
+.btnEditar {
+	background-color: $background-negro;
+	color: $blanco;
+	border-radius: 5em;
+	border: 1px solid $negro;
+	padding: 6px 15px 6px 15px;
+	width: fit-content;
+	float: right;
+	&:hover {
+		background-color: $background-blanco;
+		color: $negro;
+	}
+}
+.btnBorrar {
+	background-color: $background-rojo;
+	color: $blanco;
+	border-radius: 5em;
+	border: 1px solid $negro;
+	padding: 6px 15px 6px 15px;
+	width: fit-content;
+	float: right;
+	margin-left: 10px;
+	&:hover {
+		background-color: $background-blanco;
+		color: $negro;
+	}
+}
+.interiorTitle {
+	border-bottom: solid 1px;
+}
+.justify-content-between {
+	gap: 10px !important;
+	margin-top: 10px;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.d-grid {
+	display: grid !important;
+	justify-items: center;
+}

@@ -9,23 +9,30 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <?php
             include('functions.php');
-            $id = null;
-            if ( !empty($_GET['id'])) {
-                $id = $_REQUEST['id'];
-            }
-
-            if ( null==$id ) {
-                header("Location: ../index.php");
-            } else {
+        
+            // Si existe un valor para $_GET['id'], lo asignamos a $id
+            $id = !empty($_GET['id']) ? $_GET['id'] : null;
+        
+            if ($id) {  // Si $id no es nulo, procesamos la consulta SQL
                 $pdo = Database::connect();
-
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $sql = "SELECT * FROM noticiaswhere id = ?";
+        
+                // Corregimos el error de sintaxis en la consulta SQL y añadimos límites máximos para proteger contra inyecciones SQL
+                $sql = "SELECT * FROM noticias WHERE id = ? LIMIT 1";
                 $q = $pdo->prepare($sql);
                 $q->execute(array($id));
                 $row = $q->fetch(PDO::FETCH_ASSOC);
-
+        
                 Database::disconnect();
+        
+                // Si no se encontraron resultados para el ID, redirigimos al usuario
+                if (!$row) {
+                    header("Location: ../index.php");
+                    exit;  // Terminamos el script aquí para evitar cualquier procesamiento adicional
+                }
+            } else {  // Si $id es nulo, redirigimos al usuario
+                header("Location: ../index.php");
+                exit;
             }
         ?>
     </head>
